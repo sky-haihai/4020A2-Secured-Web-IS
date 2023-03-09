@@ -1,47 +1,17 @@
-<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
     <title>Login</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 </head>
 <body>
-<h1>Login</h1>
-<form id="loginForm">
-    <div>
-        <label for="id">ID:</label>
-        <input type="text" id="id" name="id" required>
-    </div>
-    <div>
+    <h1>Login</h1>
+    <form action="login" method="post">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username"><br><br>
         <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
-    </div>
-    <div>
-        <input type="submit" value="Login">
-    </div>
-</form>
-
-<script>
-    $(document).ready(function(){
-        $("#loginForm").submit(function(event){
-            event.preventDefault();
-            var id = $("#id").val();
-            var password = $("#password").val();
-            $.ajax({
-                type: "POST",
-                url: "/login",
-                data: {id: id, password: password},
-                success: function(response) {
-                    alert("Login successful!");
-                    <%--window.location.href = "<%=request.getContextPath()%>/login";--%>
-                },
-                error: function(response) {
-                    alert("Login failed. Please try again.");
-                }
-            });
-        });
-    });
-</script>
+        <input type="password" id="password" name="password"><br><br>
+        <input type="submit" value="Submit">
+    </form>
 </body>
 </html>

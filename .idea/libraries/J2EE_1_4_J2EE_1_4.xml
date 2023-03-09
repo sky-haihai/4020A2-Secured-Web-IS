@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="J2EE 1.4-J2EE 1.4">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/itec4020grp9/website/WEB-INF/lib/j2ee.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

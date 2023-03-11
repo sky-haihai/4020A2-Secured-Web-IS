@@ -23,9 +23,9 @@ public class WelcomeServlet extends HttpServlet {
         out.println("<html>");
         out.println("<head>");
         out.println("<title>Welcome Page</title>");
-        out.println("<link rel=\"stylesheet\" href=\"css\\reset.css\">");
-        out.println("<link rel=\"stylesheet\" href=\"css\\defaultCursor.css\">");
-        out.println("<link rel=\"stylesheet\" href=\"css\\preventPrint.css\">");
+        out.println("<link rel=\"stylesheet\" href=\"css/reset.css\">");
+        out.println("<link rel=\"stylesheet\" href=\"css/defaultCursor.css\">");
+        out.println("<link rel=\"stylesheet\" href=\"css/preventPrint.css\">");
         out.println("</head>");
 
         out.println("<body>");
@@ -34,7 +34,7 @@ public class WelcomeServlet extends HttpServlet {
         out.println("<p><a href=\"logout\">Logout</a></p>");
         out.println("<p>Printing is disabled for this page</p>");
         out.println("</body>");
-        out.println("<script src='js\\disableSelection.js'></script>");
+        out.println("<script src='js/disableSelection.js'></script>");
         out.println("</html>");
 
     }

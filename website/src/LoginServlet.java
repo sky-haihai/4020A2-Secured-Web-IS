@@ -6,21 +6,31 @@ import javax.servlet.http.*;
 @WebServlet("/login")
 public class LoginServlet extends HttpServlet {
 
+	private final String fakeUsername = "admin";
+
+	private static final String userIdAttributeName = "userId";
+
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
 		HttpSession session = request.getSession(true);
+		// should not happen, but just in case
+		if (session == null) {
+			response.sendRedirect("index.jsp");
+			return;
+		}
+
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
 
 		boolean hasInput = !username.isEmpty() && !password.isEmpty();
-		boolean inputMatches = "admin".equals(username) && "admin".equals(password);
-		boolean isLoggedIn = session != null && session.getAttribute("userId") != null;
+		boolean inputMatches = fakeUsername.equals(username) && fakeUsername.equals(password);
+		boolean isLoggedIn = session.getAttribute(userIdAttributeName) != null;
 
 		// id password ok
 		if (inputMatches) {
-			session.setAttribute("userId", "admin");
+			session.setAttribute(userIdAttributeName, fakeUsername);
 
 			response.sendRedirect("welcome");
 			return;
@@ -32,7 +42,7 @@ public class LoginServlet extends HttpServlet {
 			return;
 		}
 
-		session.removeAttribute("userId");
+		session.removeAttribute(userIdAttributeName);
 		response.sendRedirect("index.jsp");
 	}
 

@@ -14,4 +14,13 @@
         <url-pattern>/welcome</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>SkillsServlet</servlet-name>
+        <servlet-class>SkillsServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>SkillsServlet</servlet-name>
+        <url-pattern>/welcome</url-pattern>
+    </servlet-mapping>
 </web-app>

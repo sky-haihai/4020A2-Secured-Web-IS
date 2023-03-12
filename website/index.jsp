@@ -1,18 +1,30 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="UTF-8">
-	<link rel="stylesheet" href="css/reset.css">
-	<title>Login Page</title>
-</head>
-<body>
-	<h1>Login Page</h1>
-	<form action="login" method="post">
-		<label for="username">Username:</label>
-		<input type="text" id="username" name="username" required><br>
-		<label for="password">Password:</label>
-		<input type="password" id="password" name="password" required><br>
-		<input type="submit" value="Login">
-	</form>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/login.css" />
+    <title>Login Page</title>
+  </head>
+  <body>
+    <div class="container">
+      <form action="login" method="post">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required /><br /><br />
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          required
+        /><br /><br />
+        <input type="submit" value="Login" />
+      </form>
+    </div>
+
+	<div class="credit">
+		Created by Mark Amirthanathan, Mohammad Asif Khan, Yaotian Huang.
+		Art by Muina: https://www.pixiv.net/artworks/102978011
+	  </div>
+  </body>
 </html>

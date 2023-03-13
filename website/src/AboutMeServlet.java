@@ -40,26 +40,55 @@ public class AboutMeServlet extends HttpServlet {
         out.println("<link rel=\"stylesheet\" href=\"css/defaultCursor.css\">");
         out.println("<link rel=\"stylesheet\" href=\"css/preventPrint.css\">");
         out.println("<link rel=\"stylesheet\" href=\"css/credit.css\">");
+        out.println("<link rel=\"stylesheet\" href=\"css/profile.css\">");
+        out.println("<link rel=\"stylesheet\" href=\"css/aboutme.css\">");
         out.println("</head>");
 
         out.println("<body>");
 
-        // nav
-        out.println("<div class=\"nav\">");
-        out.println("<a href=\"aboutme\">About Me</a>");
-        out.println("<a href=\"skills\">Skills</a>");
-        out.println("<a href=\"contact\">Contact</a>");
+        // title bar
+        out.println("<div class='titlebar'>");
+        out.println("<div class='pagetitle'>");
+        out.println("My ePortfolio");
+        out.println("</div>");
+        out.println("<div class='welcome'>");
+        out.println("Welcome, Admin");
+        out.println("</div>");
         out.println("</div>");
 
-        out.println("<h1>Welcome to Group 9!</h1>");
+        // nav
+        out.println("<div class='nav'>");
+        out.println("<a href='aboutme'>About Me</a>");
+        out.println("<a href='skills'>Skills</a>");
+        out.println("<a href='contact'>Contact</a>");
+
+        out.println("<div class='logout'>");
+        out.println("<a href='logout'>Logout</a>");
+        out.println("</div>");
+
+        out.println("</div>");
+
+        // content
+        out.println("<div class='content'>");
+
+        out.println("<div class='contentbox' style='width: 600px; height: 400px;'>");
+
+        out.println("<div class=\"profile-box\">");
         out.println("<img src='data:image/png;base64," + imageStr + "' />");
+        out.println("<h1>Tomcat Admin</h1>");
+        out.println("<h2>Student</h2>");
+        out.println("<p>B.A. Information Technology</p>");
+        out.println("</div>");
 
-        out.println("<p><a href=\"logout\">Logout</a></p>");
+        out.println("</div>");
 
+        out.println("</div>");
+
+        // credit
         out.println("<div class='credit'>");
         out.println("Copying and Printing is disabled for this page");
         out.println("</div>");
-        
+
         out.println("</body>");
 
         out.println("<script src='js/disableSelection.js'></script>");

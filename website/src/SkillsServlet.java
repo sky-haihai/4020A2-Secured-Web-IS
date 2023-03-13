@@ -17,6 +17,9 @@ public class SkillsServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
+/*DO NOT MODIFY ↓↓↓↓*/
+
+        // check if user is logged in
         HttpSession session = request.getSession(false);
         if (session == null || session.getAttribute("userId") == null) {
             response.sendRedirect("index.jsp");
@@ -27,9 +30,6 @@ public class SkillsServlet extends HttpServlet {
         response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
         response.setHeader("Pragma", "no-cache");
         response.setDateHeader("Expires", 0);
-
-        // get image
-        String imageStr = ImageHelper.encodeImage(this, "/WEB-INF/images/user_icon.png");
 
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
@@ -42,7 +42,8 @@ public class SkillsServlet extends HttpServlet {
         out.println("<link rel=\"stylesheet\" href=\"css/preventPrint.css\">");
         out.println("<link rel=\"stylesheet\" href=\"css/credit.css\">");
         out.println("<link rel=\"stylesheet\" href=\"css/profile.css\">");
-        out.println("<link rel=\"stylesheet\" href=\"css/aboutme.css\">");
+        out.println("<link rel=\"stylesheet\" href=\"css/skills.css\">");
+
         out.println("</head>");
 
         out.println("<body>");
@@ -69,12 +70,17 @@ public class SkillsServlet extends HttpServlet {
 
         out.println("</div>");
 
+/*DO NOT MODIFY ↑↑↑↑*/
+
+/* Modify Here ↓↓↓↓*/
+
         // content
         out.println("<div class='content'>");
 
         out.println("<div class='contentbox' style='width: 600px; height: 400px;'>");
 
         out.println("<div class=\"profile-box\">");
+        String imageStr = ImageHelper.encodeImage(this, "/WEB-INF/images/user_icon.png");
         out.println("<img src='data:image/png;base64," + imageStr + "' />");
         out.println("<h1>Tomcat Admin</h1>");
         out.println("<h2>Student</h2>");
@@ -84,6 +90,11 @@ public class SkillsServlet extends HttpServlet {
         out.println("</div>");
 
         out.println("</div>");
+
+/* Modify Here ↑↑↑↑*/
+
+
+/*DO NOT MODIFY ↓↓↓↓*/
 
         // credit
         out.println("<div class='credit'>");
@@ -96,4 +107,6 @@ public class SkillsServlet extends HttpServlet {
 
         out.println("</html>");
     }
+
+/*DO NOT MODIFY ↑↑↑↑*/
 }

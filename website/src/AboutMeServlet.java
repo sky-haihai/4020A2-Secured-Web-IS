@@ -27,9 +27,6 @@ public class AboutMeServlet extends HttpServlet {
         response.setHeader("Pragma", "no-cache");
         response.setDateHeader("Expires", 0);
 
-        // get image
-        String imageStr = ImageHelper.encodeImage(this, "/WEB-INF/images/user_icon.png");
-
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
         out.println("<html>");
@@ -74,6 +71,7 @@ public class AboutMeServlet extends HttpServlet {
         out.println("<div class='contentbox' style='width: 600px; height: 400px;'>");
 
         out.println("<div class=\"profile-box\">");
+        String imageStr = ImageHelper.encodeImage(this, "/WEB-INF/images/user_icon.png");
         out.println("<img src='data:image/png;base64," + imageStr + "' />");
         out.println("<h1>Tomcat Admin</h1>");
         out.println("<h2>Student</h2>");

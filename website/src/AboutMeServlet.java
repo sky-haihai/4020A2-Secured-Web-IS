@@ -8,9 +8,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-@WebServlet("/skills")
-public class SkillsServlet extends HttpServlet {
+import util.ImageHelper;
 
+@WebServlet("/aboutme")
+public class AboutMeServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -26,35 +27,39 @@ public class SkillsServlet extends HttpServlet {
         response.setHeader("Pragma", "no-cache");
         response.setDateHeader("Expires", 0);
 
+        // get image
+        String imageStr = ImageHelper.encodeImage(this, "/WEB-INF/images/user_icon.png");
+
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
-
         out.println("<html>");
 
         out.println("<head>");
-        out.println("<title>Skills</title>");
+        out.println("<title>About Me</title>");
         out.println("<link rel=\"stylesheet\" href=\"css/reset.css\">");
-        out.println("<link rel=\"stylesheet\" href=\"css/useDefaultCursor.css\">");
+        out.println("<link rel=\"stylesheet\" href=\"css/defaultCursor.css\">");
         out.println("<link rel=\"stylesheet\" href=\"css/preventPrint.css\">");
+        out.println("<link rel=\"stylesheet\" href=\"css/credit.css\">");
         out.println("</head>");
 
         out.println("<body>");
 
-        //nav
+        // nav
         out.println("<div class=\"nav\">");
         out.println("<a href=\"aboutme\">About Me</a>");
         out.println("<a href=\"skills\">Skills</a>");
         out.println("<a href=\"contact\">Contact</a>");
         out.println("</div>");
 
-        out.println("<h1>Skills</h1>");
-        
+        out.println("<h1>Welcome to Group 9!</h1>");
+        out.println("<img src='data:image/png;base64," + imageStr + "' />");
+
         out.println("<p><a href=\"logout\">Logout</a></p>");
 
         out.println("<div class='credit'>");
         out.println("Copying and Printing is disabled for this page");
         out.println("</div>");
-
+        
         out.println("</body>");
 
         out.println("<script src='js/disableSelection.js'></script>");

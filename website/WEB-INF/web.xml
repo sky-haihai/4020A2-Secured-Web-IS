@@ -3,24 +3,20 @@
 	      xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
 	      http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
 	      version="3.0">
-
-    <servlet>
-        <servlet-name>WelcomeServlet</servlet-name>
-        <servlet-class>WelcomeServlet</servlet-class>
-    </servlet>
-
-    <servlet-mapping>
-        <servlet-name>WelcomeServlet</servlet-name>
-        <url-pattern>/welcome</url-pattern>
-    </servlet-mapping>
-
+    
     <servlet>
         <servlet-name>SkillsServlet</servlet-name>
         <servlet-class>SkillsServlet</servlet-class>
     </servlet>
 
-    <servlet-mapping>
-        <servlet-name>SkillsServlet</servlet-name>
-        <url-pattern>/welcome</url-pattern>
-    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>AboutMeServlet</servlet-name>
+        <servlet-class>AboutMeServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>ContactServlet</servlet-name>
+        <servlet-class>ContactServlet</servlet-class>
+    </servlet>
 </web-app>

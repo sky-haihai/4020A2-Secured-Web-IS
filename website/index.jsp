@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/login.css" />
+    <link rel="stylesheet" href="css/credit.css" />
     <title>Login Page</title>
   </head>
   <body>
@@ -22,9 +23,9 @@
       </form>
     </div>
 
-	<div class="credit">
-		Created by Mark Amirthanathan, Mohammad Asif Khan, Yaotian Huang.
-		Art by Muina: https://www.pixiv.net/artworks/102978011
-	  </div>
+    <div class="credit">
+      Created by Mark Amirthanathan, Mohammad Asif Khan, Yaotian Huang. Art by
+      Muina: https://www.pixiv.net/artworks/102978011
+    </div>
   </body>
 </html>

@@ -32,13 +32,13 @@ public class LoginServlet extends HttpServlet {
 		if (inputMatches) {
 			session.setAttribute(userIdAttributeName, fakeUsername);
 
-			response.sendRedirect("welcome");
+			response.sendRedirect("aboutme");
 			return;
 		}
 
 		// already logged in and no input given
 		if (isLoggedIn && !hasInput) {
-			response.sendRedirect("welcome");
+			response.sendRedirect("aboutme");
 			return;
 		}
 

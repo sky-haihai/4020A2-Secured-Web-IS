@@ -104,6 +104,7 @@ public class SkillsServlet extends HttpServlet {
         out.println("</body>");
 
         out.println("<script src='js/disableSelection.js'></script>");
+        out.println("<script src='js/disableSavingImg.js'></script>");
 
         out.println("</html>");
     }

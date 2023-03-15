@@ -17,7 +17,7 @@ public class SkillsServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-/*DO NOT MODIFY ↓↓↓↓*/
+        /* DO NOT MODIFY ↓↓↓↓ */
 
         // check if user is logged in
         HttpSession session = request.getSession(false);
@@ -70,31 +70,36 @@ public class SkillsServlet extends HttpServlet {
 
         out.println("</div>");
 
-/*DO NOT MODIFY ↑↑↑↑*/
+        /* DO NOT MODIFY ↑↑↑↑ */
 
-/* Modify Here ↓↓↓↓*/
+        /* Modify Here ↓↓↓↓ */
 
         // content
         out.println("<div class='content'>");
 
-        out.println("<div class='contentbox' style='width: 600px; height: 400px;'>");
+        out.println("<div class='contentbox' style='width: 600px; height: 500px;'>");
 
-        out.println("<div class=\"profile-box\">");
-        String imageStr = ImageHelper.encodeImage(this, "/WEB-INF/images/user_icon.png");
-        out.println("<img src='data:image/png;base64," + imageStr + "' />");
-        out.println("<h1>Tomcat Admin</h1>");
-        out.println("<h2>Student</h2>");
-        out.println("<p>B.A. Information Technology</p>");
+        out.println("<div class=\"skill-section\">");
+        out.println("<div class=\"skill-section-head\"><h2>Skills</h2></div>");
+        out.println("<table class=\"table\">");
+        out.println("<tr><th>Language</th><th>Experience</th></tr>");
+        out.println("<tr><td>Java</td><td>3 years</td></tr>");
+        out.println("<tr><td>HTML</td><td>3 years</td></tr>");
+        out.println("<tr><td>CSS</td><td>2 years</td></tr>");
+        out.println("<tr><td>JavaScript</td><td>2 years</td></tr>");
+        out.println("<tr><td>Visual Basic</td><td>5 years</td></tr>");
+        out.println("<tr><td>Python</td><td>2 months</td></tr>");
+        out.println("</table>");
+        out.println("<div class=\"skill-par2\"><p class=\"paragraph\">I have experience in a few programming languages, they include Java, HTML, CSS, JavaScript, Visual Basic, Basic and a little bit of Python. On the left, you'll see a table that shows each of the programming languages I use as well as how long I've been using each for. I learned Visual Basic and Python in high school and Java, HTML, CSS and JavaScript in university.</p></div>");
         out.println("</div>");
 
         out.println("</div>");
 
         out.println("</div>");
 
-/* Modify Here ↑↑↑↑*/
+        /* Modify Here ↑↑↑↑ */
 
-
-/*DO NOT MODIFY ↓↓↓↓*/
+        /* DO NOT MODIFY ↓↓↓↓ */
 
         // credit
         out.println("<div class='credit'>");
@@ -110,5 +115,5 @@ public class SkillsServlet extends HttpServlet {
         out.println("</html>");
     }
 
-/*DO NOT MODIFY ↑↑↑↑*/
+    /* DO NOT MODIFY ↑↑↑↑ */
 }

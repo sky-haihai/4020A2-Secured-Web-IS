@@ -38,7 +38,7 @@ public class SkillsServlet extends HttpServlet {
         out.println("<head>");
         out.println("<title>Skills</title>");
         out.println("<link rel=\"stylesheet\" href=\"css/reset.css\">");
-        out.println("<link rel=\"stylesheet\" href=\"css/defaultCursor.css\">");
+        out.println("<link rel=\"stylesheet\" href=\"css/useDefaultCursor.css\">");
         out.println("<link rel=\"stylesheet\" href=\"css/preventPrint.css\">");
         out.println("<link rel=\"stylesheet\" href=\"css/credit.css\">");
         out.println("<link rel=\"stylesheet\" href=\"css/profile.css\">");
@@ -105,6 +105,7 @@ public class SkillsServlet extends HttpServlet {
 
         out.println("<script src='js/disableSelection.js'></script>");
         out.println("<script src='js/disableSavingImg.js'></script>");
+        out.println("<script src='js/disableDragging.js'></script>");
 
         out.println("</html>");
     }

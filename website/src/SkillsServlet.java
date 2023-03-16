@@ -90,7 +90,7 @@ public class SkillsServlet extends HttpServlet {
         out.println("<tr><td>Visual Basic</td><td>5 years</td></tr>");
         out.println("<tr><td>Python</td><td>2 months</td></tr>");
         out.println("</table>");
-        out.println("<div class=\"skill-par2\"><p class=\"paragraph\">I have experience in a few programming languages, they include Java, HTML, CSS, JavaScript, Visual Basic, Basic and a little bit of Python. On the left, you'll see a table that shows each of the programming languages I use as well as how long I've been using each for. I learned Visual Basic and Python in high school and Java, HTML, CSS and JavaScript in university.</p></div>");
+        out.println("<div class=\"skill-par2\"><p class=\"paragraph\">I have experience in a few programming languages, they include Java, HTML, CSS, JavaScript, Visual Basic, Basic and a little bit of Python. Above, you'll see a table that shows each of the programming languages I use as well as how long I've been using each for. I learned Visual Basic and Python in high school and Java, HTML, CSS and JavaScript in university.</p></div>");
         out.println("</div>");
 
         out.println("</div>");

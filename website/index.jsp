@@ -24,8 +24,7 @@
     </div>
 
     <div class="credit">
-      Created by Mark Amirthanathan, Mohammad Asif Khan, Yaotian Huang. Art by
-      Muina: https://www.pixiv.net/artworks/102978011
+      Created by Mark Amirthanathan, Mohammad Asif Khan, Yaotian Huang. PHOTOGRAPH BY THE CITY OF TORONTO: https://flic.kr/p/gjDRTG
     </div>
   </body>
 </html>
